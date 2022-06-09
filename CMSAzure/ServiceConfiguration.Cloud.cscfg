@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CMSAzure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="CMSApp">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="CMSConnectionString" value="" />
+      <Setting name="CMSAzureProject" value="true" />
+      <Setting name="CMSUrlPort" value="80" />
+      <Setting name="CMSAzureAccountName" value="" />
+      <Setting name="CMSAzureSharedKey" value="" />
+      <Setting name="CMSAzureQueueEndPoint" value="" />
+      <Setting name="CMSAzureTableEndPoint" value="" />
+      <Setting name="CMSAzureBlobEndPoint" value="" />
+      <Setting name="CMSAzureCDNEndpoint" value="" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="SmartSearchWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="CMSConnectionString" value="" />
+      <Setting name="CMSAzureProject" value="true" />
+      <Setting name="CMSUrlPort" value="80" />
+      <Setting name="CMSAzureAccountName" value="" />
+      <Setting name="CMSAzureSharedKey" value="" />
+      <Setting name="CMSAzureQueueEndPoint" value="" />
+      <Setting name="CMSAzureTableEndPoint" value="" />
+      <Setting name="CMSAzureBlobEndPoint" value="" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

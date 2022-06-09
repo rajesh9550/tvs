@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CMSAzure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="CMSApp">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="CMSConnectionString" value="" />
+      <Setting name="CMSAzureProject" value="true" />
+      <Setting name="CMSUrlPort" value="81" />
+      <Setting name="CMSAzureAccountName" value="devstoreaccount1" />
+      <Setting name="CMSAzureSharedKey" value="Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==" />
+      <Setting name="CMSAzureQueueEndPoint" value="http://127.0.0.1:10001/devstoreaccount1" />
+      <Setting name="CMSAzureTableEndPoint" value="http://127.0.0.1:10002/devstoreaccount1" />
+      <Setting name="CMSAzureBlobEndPoint" value="http://127.0.0.1:10000/devstoreaccount1" />
+      <Setting name="CMSAzureCDNEndpoint" value="" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="SmartSearchWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="CMSConnectionString" value="" />
+      <Setting name="CMSAzureProject" value="true" />
+      <Setting name="CMSUrlPort" value="81" />
+      <Setting name="CMSAzureAccountName" value="devstoreaccount1" />
+      <Setting name="CMSAzureSharedKey" value="Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==" />
+      <Setting name="CMSAzureQueueEndPoint" value="http://127.0.0.1:10001/devstoreaccount1" />
+      <Setting name="CMSAzureTableEndPoint" value="http://127.0.0.1:10002/devstoreaccount1" />
+      <Setting name="CMSAzureBlobEndPoint" value="http://127.0.0.1:10000/devstoreaccount1" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CMS.AzureCloudServices</name>
+    </assembly>
+    <members>
+        <member name="T:CMS.AzureCloudServices.AzureCloudServicesModule">
+            <summary>
+            Ensures consistency and validity of Instances running within Azure Cloud Service environment.
+            </summary>
+        </member>
+        <member name="M:CMS.AzureCloudServices.AzureCloudServicesModule.ApplicationStartInit">
+            <summary>
+            Code executed on application start.
+            </summary>
+        </member>
+        <member name="M:CMS.AzureCloudServices.AzureCloudServicesModule.GetApplicationSettings(System.String)">
+            <summary>
+            Reads settings from service configuration file. 
+            </summary>
+            <param name="key">Setting key.</param>    
+        </member>
+        <member name="T:CMS.AzureCloudServices.RoleEnvironmentHandlers">
+            <summary>
+            Handlers for <see cref="T:Microsoft.WindowsAzure.ServiceRuntime.RoleEnvironment"/> events used for application validity.
+            </summary>
+        </member>
+        <member name="M:CMS.AzureCloudServices.RoleEnvironmentHandlers.ApplicationInit">
+            <summary>
+            Initializes handlers required by application.
+            </summary>
+            <remarks>
+            This method is called automatically and should not be used in custom code.
+            </remarks>
+        </member>
+        <member name="M:CMS.AzureCloudServices.RoleEnvironmentHandlers.RestartInstanceOnConfigurationChange(System.Object,Microsoft.WindowsAzure.ServiceRuntime.RoleEnvironmentChangingEventArgs)">
+            <summary>
+            Role environment changing event. Fired before change is applied.
+            </summary>
+        </member>
+    </members>
+</doc>

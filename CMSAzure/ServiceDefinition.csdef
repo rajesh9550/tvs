@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="CMSAzure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WebRole name="CMSApp" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="HttpIn" endpointName="HttpIn" />
+          <Binding endpointName="InternalHttpIn" name="InternalHttpIn" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <ConfigurationSettings>
+      <Setting name="CMSConnectionString" />
+      <Setting name="CMSAzureProject" />
+      <Setting name="CMSUrlPort" />
+      <Setting name="CMSAzureAccountName" />
+      <Setting name="CMSAzureSharedKey" />
+      <Setting name="CMSAzureQueueEndPoint" />
+      <Setting name="CMSAzureTableEndPoint" />
+      <Setting name="CMSAzureBlobEndPoint" />
+      <Setting name="CMSAzureCDNEndpoint" />
+    </ConfigurationSettings>
+    <Endpoints>
+      <InputEndpoint name="HttpIn" protocol="http" port="80" />
+      <InternalEndpoint name="InternalHttpIn" protocol="http" port="8080" />
+    </Endpoints>
+    <LocalResources>
+      <LocalStorage name="AzureTemp" cleanOnRoleRecycle="true" sizeInMB="100000" />
+      <LocalStorage name="AzureCache" cleanOnRoleRecycle="true" sizeInMB="100000" />
+    </LocalResources>
+    <Imports></Imports>
+    <!--<Startup>
+      <Task commandLine="InstallHealthMonitoringService.cmd" executionContext="elevated" taskType="simple" />
+    </Startup>-->
+  </WebRole>
+  <WorkerRole name="SmartSearchWorker" vmsize="Small">
+    <ConfigurationSettings>
+      <Setting name="CMSConnectionString" />
+      <Setting name="CMSAzureProject" />
+      <Setting name="CMSUrlPort" />
+      <Setting name="CMSAzureAccountName" />
+      <Setting name="CMSAzureSharedKey" />
+      <Setting name="CMSAzureQueueEndPoint" />
+      <Setting name="CMSAzureTableEndPoint" />
+      <Setting name="CMSAzureBlobEndPoint" />
+    </ConfigurationSettings>
+    <Imports></Imports>
+    <LocalResources>
+      <LocalStorage name="AzureTemp" cleanOnRoleRecycle="true" sizeInMB="100000" />
+      <LocalStorage name="AzureCache" cleanOnRoleRecycle="true" sizeInMB="100000" />
+    </LocalResources>
+    <!--<Startup>
+      <Task commandLine="InstallSchedulerService.cmd" executionContext="elevated" taskType="simple" />
+    </Startup>-->
+  </WorkerRole>
+</ServiceDefinition>
